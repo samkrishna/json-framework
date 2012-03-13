@@ -73,11 +73,6 @@ static NSNumber *kNegativeInfinity;
 	return self;
 }
 
-- (void)dealloc {
-    self.state = nil;
-	[super dealloc];
-}
-
 #pragma mark Methods
 
 - (void)appendBytes:(const void *)bytes length:(NSUInteger)length {
@@ -89,7 +84,7 @@ static NSNumber *kNegativeInfinity;
 		return NO;
 
 	NSArray *keys = [dict allKeys];
-	
+
 	if (sortKeys) {
 		if (sortKeysComparator) {
 			keys = [keys sortedArrayWithOptions:NSSortStable usingComparator:sortKeysComparator];
