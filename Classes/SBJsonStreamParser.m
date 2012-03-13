@@ -58,7 +58,8 @@
 }
 
 - (void)dealloc {
-    self.state = nil;
+	self.state = nil;
+	[super dealloc];
 }
 
 #pragma mark Methods
